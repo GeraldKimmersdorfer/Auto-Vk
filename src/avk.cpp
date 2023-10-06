@@ -3728,7 +3728,7 @@ namespace avk
 		mPool.get()->mDescriptorPool.getOwner().updateDescriptorSets(static_cast<uint32_t>(mOrderedDescriptorDataWrites.size()), mOrderedDescriptorDataWrites.data(), 0u, nullptr);
 	}
 
-	std::vector<descriptor_set> descriptor_cache_t::get_or_create_descriptor_sets(std::initializer_list<binding_data> aBindings)
+	std::vector<descriptor_set> descriptor_cache_t::get_or_create_descriptor_sets(std::vector<binding_data> aBindings)
 	{
 		std::vector<binding_data> orderedBindings;
 		uint32_t minSetId = std::numeric_limits<uint32_t>::max();
